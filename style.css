@@ -1,0 +1,63 @@
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;line-height:1.6;background:#f4f4f4;color:#333;scroll-behavior:smooth;}
+
+/* Header & Hero */
+header{background:#222;color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+nav a{color:#fff;margin-left:15px;text-decoration:none;font-weight:bold;transition:color 0.3s ease;}
+nav a:hover,nav a.active{color:#00adb5;}
+
+#hero{position:relative;text-align:center;padding:120px 20px;overflow:hidden;}
+.hero-bg{background: linear-gradient(120deg, #00adb5, #007b80, #00adb5); background-size:400% 400%; position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; animation:bgAnimation 15s ease infinite;}
+.hero-content{position:relative; z-index:1; text-align:center; animation:fadeIn 1s ease forwards;}
+@keyframes bgAnimation{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:4px solid #fff; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+#hero h1{font-size:36px;margin-bottom:15px;}
+#hero span{color:#222;background:#fff;padding:0 8px;border-radius:4px;}
+#hero p{font-size:18px;margin-bottom:25px;}
+.btn.gradient-btn{background:linear-gradient(45deg,#00adb5,#007b80);color:#fff;padding:12px 25px;border:none;border-radius:25px;font-weight:bold;text-decoration:none;transition:all 0.3s ease;}
+.btn.gradient-btn:hover{transform:scale(1.05);box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+
+/* Sections */
+section{padding:60px 20px;max-width:900px;margin:auto;}
+section h2{margin-bottom:20px;color:#222;position:relative;}
+.shadow-section{background:#fff;border-radius:12px;padding:40px;box-shadow:0 15px 40px rgba(0,0,0,0.1);margin-bottom:40px;}
+section p{margin-bottom:20px;}
+
+/* Skills */
+.skill{margin:15px 0;}
+.skill p{margin-bottom:5px;font-weight:bold;}
+.bar{background:#ddd;border-radius:20px;overflow:hidden;height:12px;}
+.bar span{display:block;height:100%;background:#00adb5;border-radius:20px;width:0;transition:width 1.5s ease;}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.project-card{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 10px 35px rgba(0,0,0,0.2);transition:transform 0.3s ease, box-shadow 0.3s ease;}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 15px 45px rgba(0,0,0,0.3);}
+.project-card img{width:100%;height:200px;object-fit:cover;transition:transform 0.5s ease;}
+.project-info{position:absolute;inset:0;background:rgba(0,0,0,0.75);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;opacity:0;transition:opacity 0.5s ease;padding:20px;}
+.project-card:hover img{transform:scale(1.1);}
+.project-card:hover .project-info{opacity:1;}
+.project-info a{margin-top:10px;text-decoration:none;font-weight:bold;color:#00adb5;transition:transform 0.3s ease;}
+.project-info a:hover{transform:scale(1.05);}
+
+/* Contact */
+#contact form{display:flex;flex-direction:column;gap:15px;max-width:500px;}
+#contact input,#contact textarea{padding:10px;border:1px solid #ccc;border-radius:5px;font-size:16px;}
+#contact textarea{height:120px;resize:none;}
+.form-message{color:#00adb5;font-weight:bold;margin-top:10px;}
+
+/* Footer */
+footer{background:#222;color:#fff;text-align:center;padding:30px 20px;}
+.socials{margin:15px 0;}
+.socials a{color:#00adb5;margin:0 10px;font-size:24px;display:inline-block;transition:transform 0.3s ease,color 0.3s ease;text-shadow:0 0 5px rgba(0,173,181,0.7);}
+.socials a:hover{transform:translateY(-5px) scale(1.2);color:#fff;text-shadow:0 0 10px rgba(0,173,181,1);}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(50px);transition:all 0.8s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+#typing{font-weight:bold;color:#222;background:#fff;padding:2px 8px;border-radius:4px;display:inline-block;min-width:180px;}
+
+/* Responsive */
+@media(max-width:768px){header{flex-direction:column;text-align:center;}nav{margin-top:10px;}nav a{margin:0 10px;}}

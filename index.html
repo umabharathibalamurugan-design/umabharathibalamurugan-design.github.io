@@ -1,7 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Umabharathi B - Java and Python Projects">
+  <title>Umabharathi B Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<h1>Hello Umabharathi!</h1>
-<p>This is my portfolio website.</p>
+
+  <!-- Hero Section -->
+  <header>
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <img src="C:\Users\umabh\OneDrive\Pictures\UB.jpg" alt="Umabharathi B" class="profile-img">
+        <h1>Hello, I'm <span>Umabharathi B</span></h1>
+        <p>I am a <span id="typing"></span></p>
+        <a href="#projects" class="btn gradient-btn">View My Work</a>
+        <a href="resume.pdf" class="btn gradient-btn" download>Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="reveal shadow-section">
+    <h2>About Me</h2>
+    <p>
+      I am Umabharathi B, a 2nd-year BE Computer Science and Design student at Easwari Engineering College.
+      I enjoy building websites, developing projects in Java and Python, and learning new technologies.
+      I am passionate about solving problems and creating user-friendly applications.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal shadow-section">
+    <h2>My Skills</h2>
+    <p>
+      I have experience in programming languages and technologies that allow me to develop 
+      web applications, work with data, and solve problems efficiently. Here are some of 
+      my core skills:
+    </p>
+    <div class="skill">
+      <p>Python</p>
+      <div class="bar"><span data-width="80%"></span></div>
+    </div>
+    <div class="skill">
+      <p>Java</p>
+      <div class="bar"><span data-width="70%"></span></div>
+    </div>
+    <div class="skill">
+      <p>C</p>
+      <div class="bar"><span data-width="65%"></span></div>
+    </div>
+    <div class="skill">
+      <p>HTML & CSS</p>
+      <div class="bar"><span data-width="85%"></span></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal shadow-section">
+    <h2>Projects</h2>
+    <p>
+      These projects demonstrate my abilities in developing web-based applications, 
+      applying Python for data analysis, and creating real-world solutions.
+    </p>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images/academic-system.png" alt="Academic Management System">
+        <div class="project-info">
+          <h3>Academic Management System</h3>
+          <p>Java-based web system to manage students, courses, and attendance.</p>
+          <a href="https://github.com/yourusername/academic-system" target="_blank" class="btn gradient-btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images/insurance-prediction.png" alt="Insurance Prediction">
+        <div class="project-info">
+          <h3>Insurance Prediction</h3>
+          <p>Python ML project predicting insurance costs based on user data.</p>
+          <a href="https://github.com/yourusername/insurance-prediction" target="_blank" class="btn gradient-btn">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal shadow-section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn gradient-btn">Send Message</button>
+      <p id="form-message" class="form-message"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me:</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/b-uma-bharathi-892172328/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/umabharathibalamurugan-design" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="umabharathibalamurugan@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2025 Umabharathi B</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
