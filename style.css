@@ -376,3 +376,69 @@ footer {
 .project-card.no-image:hover {
   transform: translateY(-8px);
 }
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  #hero {
+    padding: 80px 15px;
+  }
+
+  #hero h1 {
+    font-size: 26px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .shadow-section {
+    padding: 25px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  #contact form {
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  .socials a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
