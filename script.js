@@ -20,19 +20,6 @@ if (form) {
   });
 }
 
-#typing {
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(90deg, #ff6ec4, #42e695, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 2px 8px;
-  border-radius: 4px;
-  display: inline-block;
-  min-width: 180px;
-}
-
-
 // Reveal sections + skill bars
 function revealOnScroll() {
   const reveals = document.querySelectorAll('.reveal');
@@ -75,3 +62,22 @@ window.addEventListener('scroll', () => {
 });
 
 revealOnScroll();
+
+// Typing effect
+const roles = ["Web Developer", "Python Developer", "Java Enthusiast"];
+let i = 0, j = 0, isDeleting = false, currentRole='';
+const typingSpeed = 150, erasingSpeed = 80, delay = 1500;
+
+function type() {
+  const role = roles[i];
+  if (!isDeleting) { currentRole = role.substring(0, j+1); j++; }
+  else { currentRole = role.substring(0, j-1); j--; }
+
+  document.getElementById('typing').textContent = currentRole;
+
+  if (!isDeleting && j === role.length) setTimeout(()=>isDeleting=true, delay);
+  else if (isDeleting && j === 0) { isDeleting=false; i=(i+1)%roles.length; }
+
+  setTimeout(type, isDeleting ? erasingSpeed : typingSpeed);
+}
+document.addEventListener('DOMContentLoaded', type);

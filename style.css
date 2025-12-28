@@ -121,22 +121,25 @@ nav a:hover::after {
 }
 
 /* ===== Buttons ===== */
-.btn.gradient-btn {
-  background: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695);
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gradient-btn {
+  background: #6c63ff;
   color: #fff;
   padding: 12px 25px;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.btn.gradient-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
 }
-
 
 /* ===== Sections ===== */
 section {
@@ -372,86 +375,4 @@ footer {
 
 .project-card.no-image:hover {
   transform: translateY(-8px);
-}
-/* 📱 Mobile Responsive Design */
-@media (max-width: 768px) {
-
-  header {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  nav {
-    margin-top: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    margin: 5px 10px;
-    font-size: 14px;
-  }
-
-  #hero {
-    padding: 80px 15px;
-  }
-
-  #hero h1 {
-    font-size: 26px;
-  }
-
-  #hero p {
-    font-size: 16px;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  section {
-    padding: 40px 15px;
-  }
-
-  .shadow-section {
-    padding: 25px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card img {
-    height: 160px;
-  }
-
-  #contact form {
-    width: 100%;
-  }
-
-  footer {
-    padding: 20px 10px;
-    font-size: 14px;
-  }
-
-  .socials a {
-    font-size: 20px;
-    margin: 0 8px;
-  }
-}
-/* Hero Section Background Animation */
-.hero-bg {
-  background: linear-gradient(120deg, #ff6ec4, #7873f5, #42e695, #00c3ff);
-  background-size: 400% 400%;
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
 }
