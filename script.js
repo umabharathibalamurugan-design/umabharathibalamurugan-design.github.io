@@ -20,33 +20,18 @@ if (form) {
   });
 }
 
-// Typing effect
-const texts = ["Web Developer", "Python Programmer", "Java Learner", "Tech Enthusiast"];
-let count = 0, index = 0, forward = true;
-
-function typeEffect() {
-  const el = document.getElementById('typing');
-  if (!el) return;
-
-  const text = texts[count];
-
-  if (forward) {
-    el.textContent = text.slice(0, index++);
-    if (index > text.length) {
-      forward = false;
-      setTimeout(typeEffect, 1500);
-      return;
-    }
-  } else {
-    el.textContent = text.slice(0, index--);
-    if (index < 0) {
-      forward = true;
-      count = (count + 1) % texts.length;
-    }
-  }
-  setTimeout(typeEffect, 150);
+#typing {
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6ec4, #42e695, #7873f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 180px;
 }
-typeEffect();
+
 
 // Reveal sections + skill bars
 function revealOnScroll() {
